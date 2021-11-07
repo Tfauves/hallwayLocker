@@ -27,7 +27,7 @@ public class StudentController {
 
     @GetMapping("/cohort/{cohort}")
     public ResponseEntity<List<Student>> getByCohort(@PathVariable Integer cohort) {
-        return new ResponseEntity<>(repository.findStudentsByCohort(cohort, Sort.by("name")), HttpStatus.OK);
+        return new ResponseEntity<>(repository.findStudentsByCohort(cohort, Sort.by("firstName")), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -35,5 +35,9 @@ public class StudentController {
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
+    @PostMapping
+    public ResponseEntity<Student> createStudent(@RequestBody Student newStudent) {
+        return new ResponseEntity<>(repository.save(newStudent), HttpStatus.CREATED);
+    }
 
 }
