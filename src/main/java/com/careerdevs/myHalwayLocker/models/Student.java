@@ -1,13 +1,17 @@
 package com.careerdevs.myHalwayLocker.models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Student {
     @Id @GeneratedValue private Long id;
+
+    @OneToMany
+    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    private List<Stuff> myStuff;
+
     private String firstName;
     private String lastName;
     private Integer cohort;
