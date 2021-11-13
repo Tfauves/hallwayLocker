@@ -5,15 +5,15 @@ import java.util.List;
 
 @Entity
 public class Locker {
-    @Id  @GeneratedValue private Long id;
+    @Id @GeneratedValue private Long id;
 
     @OneToOne
     @JoinColumn(name = "student_id", referencedColumnName = "id")
     private Student student;
 
-    @OneToMany
-    @JoinColumn(name = "locker_id", referencedColumnName = "id")
-    private List<Stuff> myStuff;
+//    @OneToMany
+//    @JoinColumn(name = "locker_id", referencedColumnName = "id")
+//    private List<Stuff> myStuff;
 
     public Locker() {
     }
