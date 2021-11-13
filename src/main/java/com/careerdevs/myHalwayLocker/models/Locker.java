@@ -1,6 +1,7 @@
 package com.careerdevs.myHalwayLocker.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Locker {
@@ -8,9 +9,11 @@ public class Locker {
 
     @OneToOne
     @JoinColumn(name = "student_id", referencedColumnName = "id")
-
     private Student student;
 
+    @OneToMany
+    @JoinColumn(name = "locker_id", referencedColumnName = "id")
+    private List<Stuff> myStuff;
 
     public Locker() {
     }
