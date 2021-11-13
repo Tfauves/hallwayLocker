@@ -12,7 +12,7 @@ public class Student {
 //    @JoinColumn(name = "student_id", referencedColumnName = "id")
 //    private List<Stuff> myStuff;
     @OneToOne
-    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    @JoinColumn(name = "locker_id", referencedColumnName = "id")
     private Locker locker;
 
     private String firstName;
@@ -21,7 +21,8 @@ public class Student {
 
     public Student() {}
 
-    public Student(Locker locker,String firstName, String lastName, Integer cohort) {
+    public Student(Locker locker, String firstName, String lastName, Integer cohort) {
+        this.locker = locker;
         this.firstName = firstName;
         this.lastName = lastName;
         this.cohort = cohort;
@@ -57,5 +58,13 @@ public class Student {
 
     public void setCohort(Integer cohort) {
         this.cohort = cohort;
+    }
+
+    public Locker getLocker() {
+        return locker;
+    }
+
+    public void setLocker(Locker locker) {
+        this.locker = locker;
     }
 }

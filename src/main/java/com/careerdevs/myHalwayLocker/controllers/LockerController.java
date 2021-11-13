@@ -8,12 +8,20 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/locker")
 public class LockerController {
 
     @Autowired
     private LockerRepository repository;
+
+    @GetMapping
+    public @ResponseBody List<Locker> getAll() {
+        return repository.findAll();
+    }
+
 
     @GetMapping("/locker/{locker_id}")
     public @ResponseBody Locker getById(@PathVariable Long id) {
