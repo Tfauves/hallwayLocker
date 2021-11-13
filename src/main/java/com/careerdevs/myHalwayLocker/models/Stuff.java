@@ -10,17 +10,16 @@ public class Stuff {
     @Id @GeneratedValue
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "student_id", referencedColumnName = "id")
-    private Student student;
+//    @ManyToOne
+//    @JoinColumn(name = "student_id", referencedColumnName = "id")
+//    private Student student;
 
     private String title;
     private String content;
 
     public Stuff() {}
 
-    public Stuff(Student student, String title, String content) {
-        this.student = student;
+    public Stuff(String title, String content) {
         this.title = title;
         this.content = content;
     }
@@ -49,11 +48,11 @@ public class Stuff {
         this.content = content;
     }
 
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        this.student = student;
-    }
+//    public Student getStudent() {
+//        return student;
+//    }
+//
+//    public void setStudent(Student student) {
+//        this.student = student;
+//    }
 }

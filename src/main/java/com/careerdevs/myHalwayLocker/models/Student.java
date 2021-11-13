@@ -8,9 +8,12 @@ import java.util.List;
 public class Student {
     @Id @GeneratedValue private Long id;
 
-    @OneToMany
+//    @OneToMany
+//    @JoinColumn(name = "student_id", referencedColumnName = "id")
+//    private List<Stuff> myStuff;
+    @OneToOne
     @JoinColumn(name = "student_id", referencedColumnName = "id")
-    private List<Stuff> myStuff;
+    private Locker locker;
 
     private String firstName;
     private String lastName;
@@ -18,7 +21,7 @@ public class Student {
 
     public Student() {}
 
-    public Student(String firstName, String lastName, Integer cohort) {
+    public Student(Locker locker,String firstName, String lastName, Integer cohort) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.cohort = cohort;
