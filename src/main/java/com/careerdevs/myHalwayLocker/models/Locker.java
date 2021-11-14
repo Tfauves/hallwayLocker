@@ -7,8 +7,14 @@ import java.util.List;
 public class Locker {
     @Id @GeneratedValue private Long id;
 
+
+    @OneToOne
+    @JoinColumn(name = "locker_id", referencedColumnName = "id")
+    private Student student;
+
 //    @OneToOne
 //    private Student student;
+
 
 //    @OneToMany
 //    @JoinColumn(name = "locker_id", referencedColumnName = "id")

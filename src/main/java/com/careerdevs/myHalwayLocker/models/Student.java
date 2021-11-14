@@ -8,9 +8,16 @@ import java.util.List;
 public class Student {
     @Id @GeneratedValue private Long id;
 
+
+    @OneToMany
+    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    private List<Stuff> myStuff;
+
+
 //    @OneToMany
 //    @JoinColumn(name = "student_id", referencedColumnName = "id")
 //    private List<Stuff> myStuff;
+
     @OneToOne
     @JoinColumn(name = "locker_id", referencedColumnName = "id")
     private Locker locker;
