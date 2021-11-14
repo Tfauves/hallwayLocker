@@ -8,7 +8,7 @@ public class Locker {
     @Id @GeneratedValue private Long id;
 
     @OneToOne
-    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    @JoinColumn(name = "locker_id", referencedColumnName = "id")
     private Student student;
 
 //    @OneToMany
