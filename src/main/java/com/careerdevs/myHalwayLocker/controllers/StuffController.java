@@ -21,9 +21,9 @@ public class StuffController {
         return new ResponseEntity<>(repository.findAll(), HttpStatus.OK);
     }
 
-    @PostMapping
-    public ResponseEntity<Stuff> createStuff(@RequestBody Stuff newStuff) {
-        System.out.println(newStuff.getStudent().getId());
-        return new ResponseEntity<>(repository.save(newStuff), HttpStatus.CREATED);
-    }
+//    @PostMapping
+//    public ResponseEntity<Stuff> createStuff(@RequestBody Stuff newStuff) {
+//        System.out.println(newStuff.getStudent().getId());
+//        return new ResponseEntity<>(repository.save(newStuff), HttpStatus.CREATED);
+//    }
 }
