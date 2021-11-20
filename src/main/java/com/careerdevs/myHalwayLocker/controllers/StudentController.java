@@ -1,7 +1,5 @@
 package com.careerdevs.myHalwayLocker.controllers;
 
-
-
 import com.careerdevs.myHalwayLocker.models.Student;
 import com.careerdevs.myHalwayLocker.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
@@ -51,7 +50,6 @@ public class StudentController {
         if (updatedData.getCohort() != null) student.setCohort(updatedData.getCohort());
 
         return repository.save(student);
-
     }
 
     @DeleteMapping("/{id}")
