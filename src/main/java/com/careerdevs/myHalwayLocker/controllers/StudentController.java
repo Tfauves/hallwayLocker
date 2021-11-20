@@ -37,9 +37,14 @@ public class StudentController {
 
     @PostMapping
     public ResponseEntity<Student> createStudent(@RequestBody Student newStudent) {
-//        System.out.println(newStudent.getLocker().getId());
         return new ResponseEntity<>(repository.save(newStudent), HttpStatus.CREATED);
     }
+
+//    @PostMapping
+//    public ResponseEntity<Student> createStudent(@RequestBody Student newStudent) {
+////        System.out.println(newStudent.getLocker().getId());
+//        return new ResponseEntity<>(repository.save(newStudent), HttpStatus.CREATED);
+//    }
 
     @PutMapping("/{id}")
     public @ResponseBody Student updateStudent(@PathVariable Long id, @RequestBody Student updatedData) {
