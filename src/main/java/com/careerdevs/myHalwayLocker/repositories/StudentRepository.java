@@ -1,6 +1,6 @@
 package com.careerdevs.myHalwayLocker.repositories;
 
-import com.careerdevs.myHalwayLocker.models.Student;
+import com.careerdevs.myHalwayLocker.models.student.Student;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,7 +1,8 @@
-package com.careerdevs.myHalwayLocker.models;
+package com.careerdevs.myHalwayLocker.models.locker;
+
+import com.careerdevs.myHalwayLocker.models.student.Student;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Locker {

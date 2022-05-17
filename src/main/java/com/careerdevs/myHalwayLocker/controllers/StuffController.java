@@ -1,7 +1,7 @@
 package com.careerdevs.myHalwayLocker.controllers;
 
 
-import com.careerdevs.myHalwayLocker.models.Stuff;
+import com.careerdevs.myHalwayLocker.models.content.Stuff;
 import com.careerdevs.myHalwayLocker.repositories.StuffRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

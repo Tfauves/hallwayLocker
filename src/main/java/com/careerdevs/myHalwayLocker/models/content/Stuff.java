@@ -1,4 +1,4 @@
-package com.careerdevs.myHalwayLocker.models;
+package com.careerdevs.myHalwayLocker.models.content;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

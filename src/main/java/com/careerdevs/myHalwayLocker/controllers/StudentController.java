@@ -1,6 +1,6 @@
 package com.careerdevs.myHalwayLocker.controllers;
 
-import com.careerdevs.myHalwayLocker.models.Student;
+import com.careerdevs.myHalwayLocker.models.student.Student;
 import com.careerdevs.myHalwayLocker.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
